@@ -5,13 +5,13 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { createStore } from 'redux';
+import { legacy_createStore as createStore } from 'redux';
 import contactReducer from './redux/contactReducer';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { Provider } from 'react-redux';
 
 const store = createStore(contactReducer, composeWithDevTools());
-
+console.log(store)
 const root = createRoot(document.querySelector('#root'));
 
 root.render(
